@@ -9,6 +9,6 @@ ADD etc etc
 
 RUN ln -s /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
 
-#RUN dnf install -y cowsay
+# Insert RPM packages here
 
 RUN bootc container lint
