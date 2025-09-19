@@ -7,6 +7,15 @@ Software installaties op Macos 26 (Apple Silicon)
 * Virtualbox
 
 Zorg ervoor dat podman in rootful modes draait.
+```
+podman machine stop
+podman machine set --rootful
+podman machine start
+```
+Clone deze repo:
+```
+git clone   
+```
 
 
 Bouw de container lokaal:
@@ -82,7 +91,13 @@ sudo bootc upgrade --apply
 ```
 Nu is een laag bijgewerkt en de VM zal nu rebooten.
 
-De huidige manier om een pakket te installeren is omslachtig. Maar het voordeel is als je naar een nieuwe Fedora versie gaat, je alleen de FROM regel hoeft aan te passen in Containerfile.
+Login op de VM en test cowsay en lolcat:
+```
+cowsay Hallo Wereld! | lolcat
+```
+
+
+De huidige manier om een pakket te installeren is niet ideaal. Maar het voordeel is als je naar een nieuwe Fedora versie gaat, je alleen de FROM regel hoeft aan te passen in Containerfile.
 
 
 Ga naar een nieuwere versie van Fedora:
